@@ -21,7 +21,8 @@ docker-compose up
 
 ```
 docker context create ec2 --description "ec2" --docker "host=tcp://34.229.179.65:237,key=/Users/brianantonelli/.ssh/brian-personal.pem"
-docker-compose --context ec2 up -d
+docker context use ec2
+docker-compose up -d
 ```
 
 ## Finch
