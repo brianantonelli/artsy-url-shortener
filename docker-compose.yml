@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  kutt:
+  web:
     image: kutt/kutt
     depends_on:
       - postgres
