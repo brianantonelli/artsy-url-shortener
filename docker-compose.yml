@@ -1,13 +1,24 @@
 version: "3"
 
 services:
-  web:
+  nginx:
+    build: .
+    depends_on:
+      - kutt
+    ports:
+      - "80:80"
+    environment:
+      - HSTS=off
+      - HTTPS_METHOD=noredirect
+    restart: always
+
+  kutt:
     image: kutt/kutt
     depends_on:
       - postgres
       - redis
-    ports:
-      - "3000:3000"
+    # ports:
+      # - "3000:3000"
     env_file:
       - .env
     environment:
