@@ -1,0 +1,19 @@
+[MASTER]
+init-hook="from pylint.config import find_pylintrc;
+import os, sys; sys.path.append(os.path.dirname(find_pylintrc()))"
+disable=
+    missing-module-docstring,
+    consider-using-f-string,
+    redefined-builtin,
+    line-too-long,
+    broad-except,
+    missing-function-docstring,
+    dangerous-default-value,
+    too-many-function-args,
+    no-name-in-module,
+    logging-fstring-interpolation
+
+good-names-rgxs=^[_a-z][_a-z0-9]?$
+
+[FORMAT]
+max-line-length=120

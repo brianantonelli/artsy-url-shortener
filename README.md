@@ -10,6 +10,15 @@ Multicontainer using:
 
 Runs on http://localhost
 
+## Scraper
+
+```
+cd scraper
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## Docker
 
 ### Local
